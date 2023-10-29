@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url(images/fish.png) no-repeat center center/cover;
+}
+
+.main-container {
+  width: 20vw;
+  max-width: 600px;
+  min-height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(41, 72, 228);
+  border-radius: 10px;
+}
+
+.button-container {
+  padding: 20px;
+}
+
+#cronometer {
+  width: 100%;
+  font-size: 4em;
+  font-weight: bold;
+  user-select: none;
+  font-family:'Noto Sans', sans-serif;
+}
+
+
