@@ -71,13 +71,13 @@ botonReiniciar.addEventListener('click', function() {
   // Eliminar el intervalo.
   window.clearInterval(intervaloDeTiempo);
 
-  // Segundos, minutos y horas.
+  // Para reiniciar Segundos, minutos y horas.
   horas = 0;
   minutos = 0;
   segundos = 0;
   cronometro.innerHTML = '00:00:00';
 
-  // Botones.
+  // Actualizar Botones.
   botonInicioPausa.innerHTML = `<i class="bi bi-play-fill" id="inicio"></i>`;
   botonInicioPausa.classList.remove('pausar');
   botonInicioPausa.classList.add('iniciar');
