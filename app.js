@@ -41,6 +41,12 @@ function asignarFormato(unidadDeTiempo) {
   return unidadDeTiempo < 10 ? '0' + unidadDeTiempo : unidadDeTiempo;
 }
 
+const removeIniciar = botonInicioPausa.classList.remove('iniciar');
+const removePausar = botonInicioPausa.classList.remove('pausar');
+const addIniciar = botonInicioPausa.classList.add('iniciar');
+const addPausar = botonInicioPausa.classList.add('pausar');
+
+botonInicioPausa.classList.add('pausar');
 botonInicioPausa.addEventListener('click', function() {
   if (estadoCronometro === 'pausado') {
     // LLamar a la funcion cronometro cada 1000 milisegundos.
@@ -48,8 +54,8 @@ botonInicioPausa.addEventListener('click', function() {
     // Si el cronometro esta pausado, se muestra la flecha >
     // y se debe cambiar a || porque ese simbolo aparece cuando esta andando
     botonInicioPausa.innerHTML = `<i class="bi bi-pause" id="boton-inicio-pausa"></i>`;
-    botonInicioPausa.classList.remove('iniciar');
-    botonInicioPausa.classList.add('pausar');
+    removeIniciar;
+    addPausar;
     // Actualizar el estado del cronometro.
     estadoCronometro = 'andando';
   } else {
@@ -58,8 +64,8 @@ botonInicioPausa.addEventListener('click', function() {
     window.clearInterval(intervaloDeTiempo);
     // Actualizar los botones y el estado del cronometro.
     botonInicioPausa.innerHTML = `<i class="bi bi-play-fill" id="boton-inicio-pausa"></i>`;
-    botonInicioPausa.classList.remove('pausar');
-    botonInicioPausa.classList.add('iniciar');
+    removePausar;
+    addIniciar;
     estadoCronometro = 'pausado';
   }
 });
