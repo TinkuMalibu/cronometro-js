@@ -13,7 +13,7 @@ body {
 }
 
 .main-container {
-  width: 20vw;
+  width: 30vw;
   max-width: 600px;
   min-height: 350px;
   display: flex;
@@ -36,4 +36,27 @@ body {
   font-family:'Noto Sans', sans-serif;
 }
 
+.boton {
+  width: 80px;
+  height: 80px;
+  font-size: 20px;
+  margin: 10px;
+  padding: 25px;
+}
 
+
+
+
+#boton-inicio-pausa.iniciar,
+#boton-inicio-pausa.iniciar i {
+  background-color: rgb(124, 255, 24);
+}
+
+#boton-inicio-pausa.pausar,
+#boton-inicio-pausa.pausar i {
+  background-color: yellow;
+}
+
+#boton-reiniciar {
+  background-color: red;
+}
